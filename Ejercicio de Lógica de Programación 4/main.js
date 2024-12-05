@@ -6,12 +6,12 @@ while (isNaN(n)){
 const fibonacci = (n) => {
     let a = 0;
     let b = 1;
-    let fib = '0, 1';
-    for (let i=0; i<(n-2); i++){
+    let fib = '0';
+    for (let i=1; i<n; i++){
         let sum = a+b;
-        fib += `, ${sum}`;
         a = b;
         b = sum;
+        fib += `, ${a}`;
     }
     return fib;
 }
